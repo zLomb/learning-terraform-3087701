@@ -17,14 +17,10 @@ variable "ami_filter" {
   }
 }
 
-data "aws_vpc" "default" {
-  default = true
-}
-
 variable "environment" {
   description = "Development Environment"
 
-  type = objet ({
+  type = object ({
     name = string
     network_prefix = string
   })
